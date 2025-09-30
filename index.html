@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Predicción de Precio V.2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Predicción de Precio de Casa</h1>
+
+  <form action="/predecir" method="POST">
+    <label for="habitaciones">Número de habitaciones:</label>
+    <input type="number" id="habitaciones" name="habitaciones" required>
+
+    <label for="superficie">Superficie (m²):</label>
+    <input type="number" id="superficie" name="superficie" step="0.1" required>
+
+    <label for="ubicacion">Ubicación:</label>
+    <select id="ubicacion" name="ubicacion" required>
+      <option value="">Selecciona una ubicación</option>
+      <option value="centro">Centro</option>
+      <option value="suburbio">Suburbio</option>
+      <option value="rural">Rural</option>
+    </select>
+
+    <button type="submit">Predecir Precio</button>
+  </form>
+</body>
+</html>
